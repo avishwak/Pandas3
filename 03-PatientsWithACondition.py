@@ -22,7 +22,7 @@ def find_patients(patients: pd.DataFrame) -> pd.DataFrame:
     return patients[patients['conditions'].str.contains(r"(^|\s)DIAB1", regex=True)]
 
 """
-# Note
+# Note: isin matches the whole string and is not suitable for this case.
 r: raw string
 ^: matches the start of the string
 \s: matches any whitespace character (space, tab, newline)
